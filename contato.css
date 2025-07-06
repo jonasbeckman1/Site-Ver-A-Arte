@@ -1,0 +1,154 @@
+/* contato.css */
+.contato-content {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center; /* Centraliza o texto dentro do container preto */
+}
+
+.contato-content h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.contato-content .subtitulo {
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.botao-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.cadastrar-cv-btn {
+    background-color: #f1c930;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+    border: 2px solid #f1c930;
+}
+
+.cadastrar-cv-btn:hover {
+    background-color: white;
+    color: #f1c930;
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.texto-acima-container {
+    text-align: center; /* Adicione esta linha para centralizar o texto */
+    margin-bottom: 20px;
+}
+
+.texto-acima-container h2 {
+    color: #2c2c2c;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.texto-acima-container p {
+    color: #555;
+    font-size: 1em;
+}
+
+/* Estilos para o container dos canais */
+.canais-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.canal {
+    text-align: center;
+}
+
+.canal img {
+    display: block; /* Evita espaçamento extra abaixo da imagem */
+    margin: 0 auto 10px; /* Centraliza a imagem horizontalmente e adiciona espaço abaixo */
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.canal h2 {
+    color: #2c2c2c;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.canal p {
+    color: #555;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .texto-acima-container h2 {
+    font-size: 1.4em;
+  }
+
+  .texto-acima-container p {
+    font-size: 0.95em;
+  }
+
+  .canais-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contato-content {
+    padding: 20px 10px;
+    margin: 20px 10px;
+  }
+
+  .contato-content h1 {
+    font-size: 2em;
+  }
+
+  .contato-content .subtitulo {
+    font-size: 1em;
+  }
+
+  .cadastrar-cv-btn {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  .imagem-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .canal h2 {
+    font-size: 1.2em;
+  }
+
+  .canal p {
+    font-size: 0.9em;
+  }
+}

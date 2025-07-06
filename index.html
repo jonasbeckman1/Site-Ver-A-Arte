@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VER-A-ARTE</title>
+  <link rel="icon" href="logo1.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="logo.png" alt="Logo do Site" class="logo">
+    </a>
+  </div>
+  <div class="container">
+    <nav>
+      <div class="nav-content">
+        <ul class="menu">
+          <li><a href="agenda.html">AGENDA</a></li>
+          <li><a href="gastronomia.html">GASTRONOMIA</a></li>
+          <li><a href="fotos.html">FOTOS</a></li>
+          <li><a href="contato.html">CONTATO</a></li>
+        </ul>
+        <a href="jogos.html" class="login-btn">JOGOS</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="linha-preta-header"></div> 
+
+<div class="linha-pesquisa">
+  <div class="barra-pesquisa">
+    <input type="text" placeholder="Pesquisar...">
+    <button>🔍</button>
+  </div>
+</div>
+
+<!-- SLIDESHOW FORA DA BARRA DE PESQUISA -->
+<div class="slideshow-container">
+  <div class="slide fade">
+    <div class="slide-number">1 / 3</div>
+    <img src="imagem8.jpg" alt="Notícia 1">
+  </div>
+
+  <div class="slide fade">
+    <div class="slide-number">2 / 3</div>
+    <img src="imagem9.jpg" alt="Notícia 2">
+  </div>
+
+  <div class="slide fade">
+    <div class="slide-number">3 / 3</div>
+    <img src="imagem10.jpg" alt="Notícia 3">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<div class="localidade-barra">
+    <select name="localidades" class="select-localidade">
+      <option selected>Todas as localidades</option>
+      <option>Belém</option>
+      <option>Ananindeua</option>
+      <option>Santarém</option>
+    </select>
+    <button class="buscar-btn">BUSCAR</button>
+  </div>
+  
+  <div class="quadrados-container">
+    <a href="https://www.sympla.com.br/evento/festa-junina-do-colegio-ideal-2025/2965411" class="quadrado-link">
+      <img src="imagem11.png" alt="Evento 1">
+      <div class="overlay-text">Festa Junina do Colégio Ideal 2025</div>
+    </a>
+    <a href="https://www.sympla.com.br/evento/studio-pub-rock-festival-dia-mundial-do-rock-2025-musicpark-12-07/2993016" class="quadrado-link">
+      <img src="imagem12.png" alt="Evento 2">
+      <div class="overlay-text">STUDIO PUB ROCK FESTIVAL - DIA MUNDIAL DO ROCK 2025</div>
+    </a>
+    <a href="https://palcobelem.com.br/evento_antigo/forr%C3%B3-ananindeua-2025-%E2%80%93-o-maior-s%C3%A3o-jo%C3%A3o-do-par%C3%A1" class="quadrado-link">
+      <img src="imagem13.png" alt="Evento 3">
+      <div class="overlay-text">Forró Ananindeua 2025</div>
+    </a>
+    <a href="https://occo.pt/events/festival-entre-quintas-jovens-virtuosos/" class="quadrado-link">
+      <img src="imagem15.png" alt="Evento 4">
+      <div class="overlay-text">Jovens Virtuosos</div>
+    </a>
+  </div>
+  
+  <div class="imagem-baixo-quadrados">
+    <img src="imagem2.jpg" alt="Imagem abaixo dos quadrados">
+  </div>
+  
+  <div class="em-alta-section">
+    <h2>Em alta</h2>
+  
+    <div class="quadrados-container">
+    <a href="https://bileto.sympla.com.br/event/106249/d/318215?_gl=1*1q32rfx*_gcl_au*NDczOTk0MDg4LjE3NTA5NDQ5ODMuMTQ5MDYyNzMzMi4xNzUwOTQ3MDkxLjE3NTA5NDcwOTA.*_ga*MTY2MjQ2Njg5MC4xNzUwOTQ0OTgz*_ga_KXH10SQTZF*czE3NTA5NDQ5ODMkbzEkZzEkdDE3NTA5NDcwOTAkajI5JGwwJGgxMzU3MzM4Mzc1" class="quadrado-link">
+      <img src="imagem16.png" alt="Evento 1">
+      <div class="overlay-text">Três Mulheres Altas</div>
+    </a>
+    <a href="https://www.sympla.com.br/evento/festa-junina-do-colegio-ideal-2025/2965411" class="quadrado-link">
+      <img src="imagem11.png" alt="Evento 2">
+      <div class="overlay-text">Festa Junina do Colégio Ideal 2025</div>
+    </a>
+    <a href="https://www.sympla.com.br/evento/bruno-sutter-executa-iron-maiden-em-belem-pa/2993623" class="quadrado-link">
+      <img src="imagem17.png" alt="Evento 3">
+      <div class="overlay-text">Bruno Sutter Executa Iron Maiden</div>
+    </a>
+    <a href="https://www.sympla.com.br/evento/ii-ecopoltur/2803285" class="quadrado-link">
+      <img src="imagem18.png" alt="Evento 4">
+      <div class="overlay-text">II ECOPOLTUR</div>
+    </a>
+    </div>
+  </div>
+  
+  <div class="parceiros-section">
+    <h3>Nossos parceiros</h3>
+    <div class="parceiros-container">
+      <img src="imagem3.png" alt="Parceiro 1">
+      <img src="imagem4.png" alt="Parceiro 2">
+      <img src="imagem5.png" alt="Parceiro 3">
+      <img src="imagem6.png" alt="Parceiro 4">
+      <img src="imagem7.png" alt="Parceiro 5">
+      <!-- As imagens serão duplicadas automaticamente pela animação -->
+      <img src="imagem3.png" alt="Parceiro 1">
+      <img src="imagem4.png" alt="Parceiro 2">
+      <img src="imagem5.png" alt="Parceiro 3">
+      <img src="imagem6.png" alt="Parceiro 4">
+      <img src="imagem7.png" alt="Parceiro 5">
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>Sobre o Ver-A-Arte</h4>
+        <p>E aí, já pensou o que fazer hoje? Somos uma ferramenta digital para facilitar sua vida. Isso mesmo!</p>
+        <p>Plataforma inteligente 100% web para o gerenciamento de vendas e inscrições online, controle e pagamento de reservas, filas e listas de espera, sistema RSVP, promoters, captação de leads, divulgação, ideal para gestão de eventos em geral, casas noturnas, teatros, workshops, bares, restaurantes, aniversários e formaturas!</p>
+        <p>Disponível em qualquer dispositivo em tempo real e totalmente adaptável à sua necessidade.</p>
+        <p>#pensanoevento</p>
+        <p><strong>PENSA ENTRETENIMENTO LTDA.</strong></p>
+        <p>CNPJ: 20.334.894/0001-63</p>
+        <p>Endereço: Av. Marechal Castelo Branco, 65 - Sala 1101 Torre A Campinas - São José/SC - 88.101-020</p>
+      </div>
+      
+      <div class="footer-right">
+        <h4>NAVEGUE</h4>
+        <p>
+          <a href="https://www.instagram.com/ver-a-arte" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="social-icon"> instagram.com/ver-a-arte
+          </a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/ver-a-arte" target="_blank">
+            <img src="facebook.png" alt="Facebook" class="social-icon"> facebook.com/ver-a-arte
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+<main>
+</main>
+
+<!-- JS AO FINAL DO BODY -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let slideIndex = 1;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides(n) {
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    showSlides(slideIndex);
+    window.plusSlides = plusSlides;
+  });
+</script>
+
+</body>
+</html>

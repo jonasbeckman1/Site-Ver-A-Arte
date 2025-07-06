@@ -1,0 +1,170 @@
+.fotos-content {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.fotos-content h1 {
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.quadrado {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quadrado img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.quadrado:hover img {
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
+
+/* Modal de imagem */
+.imagem-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 90%;
+  max-height: 90%;
+  flex-wrap: wrap;
+}
+
+.modal-content img {
+  max-width: 60vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.info-imagem {
+  max-width: 30vw;
+  color: #fff;
+  text-align: left;
+}
+
+.info-imagem h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.info-imagem p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Botão fechar */
+.fechar-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Setas de navegação */
+.seta {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10001;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.seta-esquerda {
+  left: 20px;
+}
+
+.seta-direita {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .fotos-content {
+    padding: 10px;
+  }
+
+  .galeria-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .quadrado {
+    height: 150px;
+  }
+
+  .modal-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .modal-content img {
+    max-width: 90vw;
+    max-height: 60vh;
+  }
+
+  .info-imagem {
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  .info-imagem h2 {
+    font-size: 20px;
+  }
+
+  .info-imagem p {
+    font-size: 14px;
+  }
+
+  .seta {
+    font-size: 30px;
+    padding: 8px;
+  }
+
+  .fechar-modal {
+    font-size: 35px;
+    top: 10px;
+    right: 20px;
+  }
+}

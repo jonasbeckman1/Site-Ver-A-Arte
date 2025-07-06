@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VER-A-ARTE</title>
+  <link rel="icon" href="logo1.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="fotos.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo do Site" class="logo" />
+      </a>
+    </div>
+    <div class="container">
+      <nav>
+        <div class="nav-content">
+          <ul class="menu">
+            <li><a href="agenda.html">AGENDA</a></li>
+            <li><a href="gastronomia.html">GASTRONOMIA</a></li>
+            <li><a href="fotos.html">FOTOS</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
+          </ul>
+          <a href="jogos.html" class="login-btn">JOGOS</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="linha-preta-header"></div>
+
+  <div class="localidade-barra">
+    <select name="localidades" class="select-localidade">
+      <option selected>Todas as localidades</option>
+      <option>Belém</option>
+      <option>Ananindeua</option>
+      <option>Santarém</option>
+      <option>Parauapebas</option>
+      <option>Marabá</option>
+    </select>
+    <button class="buscar-btn">BUSCAR</button>
+  </div>
+
+  <main class="fotos-content">
+    <div class="galeria-container">
+      <div class="quadrado" onclick="expandirImagem(0)"><img src="imagem24.png" alt="Foto 1"/></div>
+      <div class="quadrado" onclick="expandirImagem(1)"><img src="imagem25.png" alt="Foto 2"/></div>
+      <div class="quadrado" onclick="expandirImagem(2)"><img src="imagem26.png" alt="Foto 3"/></div>
+      <div class="quadrado" onclick="expandirImagem(3)"><img src="imagem27.png" alt="Foto 4"/></div>
+      <div class="quadrado" onclick="expandirImagem(4)"><img src="imagem28.png" alt="Foto 5"/></div>
+      <div class="quadrado" onclick="expandirImagem(5)"><img src="imagem29.png" alt="Foto 6"/></div>
+      
+      <div class="quadrado" onclick="expandirImagem(6)"><img src="imagem30.png" alt="Foto 7"/></div>
+      <div class="quadrado" onclick="expandirImagem(7)"><img src="imagem31.png" alt="Foto 8"/></div>
+      <div class="quadrado" onclick="expandirImagem(8)"><img src="imagem32.png" alt="Foto 9"/></div>
+      <div class="quadrado" onclick="expandirImagem(9)"><img src="imagem33.png" alt="Foto 10"/></div>
+      <div class="quadrado" onclick="expandirImagem(10)"><img src="imagem34.png" alt="Foto 11"/></div>
+      <div class="quadrado" onclick="expandirImagem(11)"><img src="imagem35.png" alt="Foto 12"/></div>
+
+      <div class="quadrado" onclick="expandirImagem(12)"><img src="imagem24.png" alt="Foto 13"/></div>
+      <div class="quadrado" onclick="expandirImagem(13)"><img src="imagem25.png" alt="Foto 14"/></div>
+      <div class="quadrado" onclick="expandirImagem(14)"><img src="imagem26.png" alt="Foto 15"/></div>
+      <div class="quadrado" onclick="expandirImagem(15)"><img src="imagem27.png" alt="Foto 16"/></div>
+      <div class="quadrado" onclick="expandirImagem(16)"><img src="imagem28.png" alt="Foto 17"/></div>
+      <div class="quadrado" onclick="expandirImagem(17)"><img src="imagem29.png" alt="Foto 18"/></div>
+
+      <div class="quadrado" onclick="expandirImagem(18)"><img src="imagem30.png" alt="Foto 19"/></div>
+      <div class="quadrado" onclick="expandirImagem(19)"><img src="imagem31.png" alt="Foto 20"/></div>
+      <div class="quadrado" onclick="expandirImagem(20)"><img src="imagem32.png" alt="Foto 21"/></div>
+      <div class="quadrado" onclick="expandirImagem(21)"><img src="imagem33.png" alt="Foto 22"/></div>
+      <div class="quadrado" onclick="expandirImagem(22)"><img src="imagem34.png" alt="Foto 23"/></div>
+      <div class="quadrado" onclick="expandirImagem(23)"><img src="imagem35.png" alt="Foto 24"/></div>
+
+      <div class="quadrado" onclick="expandirImagem(24)"><img src="imagem24.png" alt="Foto 25"/></div>
+      <div class="quadrado" onclick="expandirImagem(25)"><img src="imagem25.png" alt="Foto 26"/></div>
+      <div class="quadrado" onclick="expandirImagem(26)"><img src="imagem26.png" alt="Foto 27"/></div>
+      <div class="quadrado" onclick="expandirImagem(27)"><img src="imagem27.png" alt="Foto 28"/></div>
+      <div class="quadrado" onclick="expandirImagem(28)"><img src="imagem28.png" alt="Foto 29"/></div>
+      <div class="quadrado" onclick="expandirImagem(29)"><img src="imagem29.png" alt="Foto 30"/></div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="imagem-modal" class="imagem-modal">
+    <span class="fechar-modal" onclick="fecharImagem()">&times;</span>
+    <span class="seta seta-esquerda" onclick="navegarImagem(-1)">&#10094;</span>
+    <span class="seta seta-direita" onclick="navegarImagem(1)">&#10095;</span>
+    <div class="modal-content">
+      <img id="imagem-expandida" src="" alt="Imagem Expandida" />
+      <div class="info-imagem">
+        <h2 id="titulo-imagem">Lorem Ipsum</h2>
+        <p id="descricao-imagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>Sobre o Ver-A-Arte</h4>
+        <p>E aí, já pensou o que fazer hoje? Somos uma ferramenta digital para facilitar sua vida.</p>
+        <p>Plataforma inteligente 100% web para gerenciamento de eventos em geral!</p>
+        <p>#pensanoevento</p>
+        <p><strong>PENSA ENTRETENIMENTO LTDA.</strong></p>
+        <p>CNPJ: 20.334.894/0001-63</p>
+        <p>Endereço: Av. Marechal Castelo Branco, 65 - Sala 1101 Torre A Campinas - São José/SC - 88.101-020</p>
+      </div>
+      <div class="footer-right">
+        <h4>NAVEGUE</h4>
+        <p>
+          <a href="https://www.instagram.com/ver-a-arte" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="social-icon"/> instagram.com/ver-a-arte
+          </a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/ver-a-arte" target="_blank">
+            <img src="facebook.png" alt="Facebook" class="social-icon"/> facebook.com/ver-a-arte
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const imagens = [
+      "imagem24.png",
+      "imagem25.png",
+      "imagem26.png",
+      "imagem27.png",
+      "imagem28.png",
+      "imagem29.png",
+      "imagem30.png",
+      "imagem31.png",
+      "imagem32.png",
+      "imagem33.png",
+      "imagem34.png",
+      "imagem35.png",
+      "imagem24.png",
+      "imagem25.png",
+      "imagem26.png",
+      "imagem27.png",
+      "imagem28.png",
+      "imagem29.png",
+      "imagem30.png",
+      "imagem31.png",
+      "imagem32.png",
+      "imagem33.png",
+      "imagem34.png",
+      "imagem35.png",
+      "imagem24.png",
+      "imagem25.png",
+      "imagem26.png",
+      "imagem27.png",
+      "imagem28.png",
+      "imagem29.png"
+    ];
+
+    let indiceAtual = 0;
+
+    function expandirImagem(indice) {
+      indiceAtual = indice;
+      atualizarModal();
+      document.getElementById('imagem-modal').style.display = 'flex';
+    }
+
+    function fecharImagem() {
+      document.getElementById('imagem-modal').style.display = 'none';
+    }
+
+    function navegarImagem(direcao) {
+      indiceAtual += direcao;
+      if (indiceAtual < 0) indiceAtual = imagens.length - 1;
+      if (indiceAtual >= imagens.length) indiceAtual = 0;
+      atualizarModal();
+    }
+
+    function atualizarModal() {
+      document.getElementById('imagem-expandida').src = imagens[indiceAtual];
+      document.getElementById('titulo-imagem').textContent = "Lorem Ipsum " + (indiceAtual + 1);
+      document.getElementById('descricao-imagem').textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    }
+
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('imagem-modal');
+      if (event.target === modal) fecharImagem();
+    });
+  </script>
+</body>
+</html>

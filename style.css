@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f1c930;
+    color: #2c2c2c;
+}
+
+/* HEADER */
+header {
+    background-color: #f1c930;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo {
+    height: 150px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+}
+
+.menu li a:hover {
+    color: white;
+}
+
+.login-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* LINHA PRETA */
+.linha-preta-header {
+    background-color: black;
+    height: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* BARRA DE PESQUISA */
+.barra-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99.9%;
+    gap: 0;
+}
+
+.barra-pesquisa input[type="text"] {
+    padding: 10px;
+    width: 95%;
+    border: 2px solid black;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.barra-pesquisa button {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-left: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.barra-pesquisa button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px; /* Ajuste a altura desejada */
+    object-fit: cover; /* Preenche mantendo proporção */
+    display: block;
+}
+
+/* Numeração */
+.slide-number {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Botões de navegação */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0 3px 3px 0;
+    z-index: 10;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fade {
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+.localidade-barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px;
+}
+
+.select-localidade {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    flex: 1; /* Faz o select expandir para ocupar espaço */
+    max-width: 400px;
+    outline: none;
+}
+
+.buscar-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.buscar-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Container dos quadrados */
+.quadrados-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 2000px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilo dos quadrados */
+.quadrado {
+    background-color: black;
+    height: 250px; /* Aumenta um pouco mais a altura */
+    flex: 1; /* Faz os quadrados crescerem igualmente */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Quadrado com imagem clicável */
+.quadrado-link {
+    position: relative;
+    display: block;
+    flex: 1;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.quadrado-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    display: block;
+}
+
+.quadrado-link .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* cinza translúcido */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.quadrado-link:hover img {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+}
+
+.quadrado-link:hover .overlay-text {
+    opacity: 1;
+}
+
+.imagem-baixo-quadrados {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-baixo-quadrados img {
+    width: 98%;
+    height: 120px; /* ou ajuste conforme preferir */
+    object-fit: cover;
+    border-radius: 8px; /* opcional para bordas arredondadas */
+}
+
+.em-alta-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.em-alta-section h2 {
+    font-size: 28px;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+/* Os quadrados continuam sendo estilizados por .quadrados-container e .quadrado */
+
+.parceiros-section {
+    width: 98%;
+    padding: 40px 1%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.parceiros-section h3 {
+    font-size: 24px;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.parceiros-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Esconde as imagens que saem da área visível */
+    position: relative;
+    flex-wrap: nowrap; /* Evita que as imagens se quebrem em linha */
+}
+
+.parceiros-container img {
+    height: 80px;
+    width: 150px; /* Definindo a largura fixa para as imagens */
+    object-fit: contain; /* Mantém as proporções das imagens */
+    flex: 0 0 auto; /* Impede as imagens de se esticarem */
+    transition: transform 1s ease-in-out;
+    margin-right: 20px;
+}
+
+/* Animação para mover as imagens da direita para a esquerda */
+@keyframes slideshow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move as imagens para a esquerda */
+    }
+}
+
+/* Adiciona a animação de slideshow, garantindo movimento contínuo */
+.parceiros-container {
+    animation: slideshow 20s linear infinite;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-left,
+  .footer-right {
+    width: 48%; /* Ajuste de largura para que ambos os lados fiquem equilibrados */
+  }
+  
+  .footer-left h4,
+  .footer-right h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .footer-left p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .footer-right p {
+    margin-bottom: 10px;
+  }
+  
+  .footer-right a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-right a:hover {
+    color: #f1c930; /* Cor de destaque ao passar o mouse */
+  }
+
+  .social-icon {
+    margin-right: 10px; /* Adiciona espaço entre a imagem e o texto */
+    width: 20px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 20px; /* Mantém a proporção das imagens */
+  }
+
+  @media (max-width: 1024px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-content {
+    flex-direction: column;
+  }
+
+  .login-btn {
+    margin: 10px 0 0;
+  }
+
+  .quadrados-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .quadrados-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quadrado-link {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .barra-pesquisa {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .barra-pesquisa input[type="text"] {
+    width: 100%;
+    border-radius: 8px;
+    border-right: 2px solid black;
+  }
+
+  .barra-pesquisa button {
+    width: 100%;
+    border-radius: 8px;
+    border-left: 2px solid black;
+  }
+
+  .slideshow-container .slide img {
+    height: 200px;
+  }
+
+  .localidade-barra {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .select-localidade {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.buscar-btn {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+  .imagem-baixo-quadrados img {
+    height: 80px;
+  }
+
+  .parceiros-section h3 {
+    text-align: center;
+  }
+
+  .parceiros-container {
+    animation: none; /* remove animação para celular */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .parceiros-container img {
+    margin: 10px;
+  }
+}
+  
